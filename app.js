@@ -30,8 +30,6 @@ app.use('/properties', properties);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  console.log('======', req);
-  console.log('======', res);
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -39,9 +37,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  console.log('======', req);
-  console.log('======', res);
-  // set locals, only providing error in 
+  // set locals, only providing error in case of development mode
   // res.locals is an object passed to whatever rendering engine your app is using
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
