@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var tableify = require('tableify');
  
-/* GET users listing. */
+/* GET properties listing. */
 router.get('/', function(req, res, next) {
   
   var options = {
